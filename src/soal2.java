@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public class soal2 {
     public static void emailCheck(String email) {
-        String re = "/[A-Za-z0-9._]{1,20}+@[.]*(gmail|domain|yahoo)*(\\.co\\.id|\\.id)/gm";
+        String re = "[A-Za-z0-9._]{3,20}+@\\.*(gmail|domain|yahoo)\\.*(co\\.id|id)";
         // Contoh email yang valid -> deva@.gmail.com
         // Karena format email wajib menggunakan tanda  titik ‘.’ setelah ‘@’
 
@@ -17,10 +17,10 @@ public class soal2 {
         Matcher matcher = pattern.matcher(email);
 
         if(matcher.matches())
-            System.out.println(email + " is valid");
+            System.out.println(email + " --> valid");
 
         else
-            System.out.println(email + " is invalid");
+            System.out.println(email + " --> invalid");
 
     }
 
@@ -32,7 +32,7 @@ public class soal2 {
 
         emailCheck(email);
 
-        //Contoh email yang valid -> deva@.gmail.com
+        // Contoh email yang valid -> deva@.gmail.com
         // Karena format email wajib menggunakan tanda  titik ‘.’ setelah ‘@’
 
     }
